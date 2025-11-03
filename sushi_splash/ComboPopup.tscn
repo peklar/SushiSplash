@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://te8pmj3brnrb"]
+
+[ext_resource type="Script" path="res://ComboPopup.gd" id="1_bkt1b"]
+
+[node name="ComboPopup" type="RichTextLabel"]
+offset_right = 338.0
+offset_bottom = 143.0
+bbcode_enabled = true
+script = ExtResource("1_bkt1b")

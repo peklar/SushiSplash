@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://sltih35u3twv"]
+
+[ext_resource type="Script" path="res://vanish_particles.gd" id="1_26rgs"]
+[ext_resource type="Texture2D" uid="uid://b8reyo4mboxcc" path="res://Fish/Star.png" id="2_iufvc"]
+
+[sub_resource type="Curve" id="Curve_0h8xa"]
+_data = [Vector2(0, 0), 0.0, 7.08795, 0, 0, Vector2(0.171875, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.85016, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_72eh7"]
+offsets = PackedFloat32Array(0, 0.0745614, 0.631579, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="FishTrashVanish" type="Node2D"]
+z_index = 1
+script = ExtResource("1_26rgs")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+scale = Vector2(2, 2)
+emitting = false
+amount = 32
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.88
+texture = ExtResource("2_iufvc")
+emission_shape = 2
+emission_sphere_radius = 6.61
+direction = Vector2(1, -1)
+spread = 180.0
+gravity = Vector2(0, 100)
+initial_velocity_min = 72.99
+initial_velocity_max = 91.3
+angular_velocity_min = -260.87
+angular_velocity_max = 323.48
+angle_max = 198.3
+scale_amount_min = 0.03
+scale_amount_max = 0.06
+scale_amount_curve = SubResource("Curve_0h8xa")
+color_ramp = SubResource("Gradient_72eh7")
+
+[connection signal="finished" from="CPUParticles2D" to="." method="_on_cpu_particles_2d_finished"]

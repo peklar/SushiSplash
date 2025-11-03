@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://eaclcf6n12sh"
+path="res://.godot/imported/beep_09.ogg-7dcc8b6f792c956f9a21a3bf70c644d0.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundEffects/pro sound collection/beep_09.ogg"
+dest_files=["res://.godot/imported/beep_09.ogg-7dcc8b6f792c956f9a21a3bf70c644d0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

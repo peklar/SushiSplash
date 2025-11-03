@@ -1,0 +1,11 @@
+#!/usr/bin/php
+<?php
+    chdir(dirname(__FILE__));
+    include("options.php");
+
+    system('./stop');
+    $cmd = 'cd '.dirname(__FILE__).' ; ./'.$options['appName'].' > /dev/null 2>&1 &';
+    $cmd = 'cd '.dirname(__FILE__).' ; ./'.$options['appName'].' ';
+    echo $cmd;
+    system($cmd);
+

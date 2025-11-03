@@ -1,0 +1,9 @@
+This game contains third-party licensed assets which are used in accordance with their respective license terms. These assets are licensed to me (the developer) and are permitted for use in commercial media products, such as this game.
+
+Please note that the licensed assets included in this game:
+
+Are only authorized for use within this final game product, and
+
+May not be extracted, reused, or redistributed outside of this game without acquiring the appropriate license from the asset creator or marketplace.
+
+If you require access to the raw assets for use in other projects, a separate license must be purchased by your organization.

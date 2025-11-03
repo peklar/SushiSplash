@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cnlrq37iuadjr"]
+
+[ext_resource type="FontFile" uid="uid://bs7bm83p55awx" path="res://MaterhornNF.otf" id="1_07pbl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb0iq"]
+bg_color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxFlat_xb0iq")
+RichTextLabel/fonts/normal_font = ExtResource("1_07pbl")

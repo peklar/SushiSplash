@@ -1,0 +1,59 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+warnings/check_invalid_track_paths=false
+
+[application]
+
+config/name="Sushi_Splash"
+run/main_scene="res://Game/game.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+run/low_processor_mode_sleep_usec=33000
+boot_splash/show_image=false
+config/icon="res://icon.svg"
+
+[autoload]
+
+MusicManager="*res://Audio/MusicManager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godOSC/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://DEBUGUI/": "pink",
+"res://Fish/": "teal",
+"res://Game/": "yellow",
+"res://Trash/": "red",
+"res://WaterSim/": "blue"
+}
+
+[global_group]
+
+Fish=""
+Boat=""
+WaterPoint=""
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+textures/lossless_compression/force_png=true
+environment/defaults/default_clear_color=Color(0.192157, 0.533333, 1, 1)

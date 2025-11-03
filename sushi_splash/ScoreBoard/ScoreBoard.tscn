@@ -1,0 +1,284 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcxqueysoos6b"]
+
+[ext_resource type="Script" path="res://ScoreBoard/score_board.gd" id="1_g8i35"]
+[ext_resource type="FontFile" uid="uid://bs7bm83p55awx" path="res://MaterhornNF.otf" id="2_1ionu"]
+
+[sub_resource type="Animation" id="Animation_ep1o7"]
+resource_name = "Hide"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_0yj6s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_627f8"]
+resource_name = "Show"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6jvc0"]
+_data = {
+"Hide": SubResource("Animation_ep1o7"),
+"RESET": SubResource("Animation_0yj6s"),
+"Show": SubResource("Animation_627f8")
+}
+
+[node name="ScoreBoard" type="CanvasLayer"]
+script = ExtResource("1_g8i35")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6jvc0")
+}
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackGradient" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.654902)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="HBoxContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Invis" type="RichTextLabel" parent="Control/VBoxContainer/Text"]
+clip_contents = false
+custom_minimum_size = Vector2(640, 115.2)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="Daily" type="RichTextLabel" parent="Control/VBoxContainer/Text"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=70'][center] Daily"
+scroll_active = false
+
+[node name="AllTime" type="RichTextLabel" parent="Control/VBoxContainer/Text"]
+visible = false
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=70'][center]All Time"
+scroll_active = false
+
+[node name="Text2" type="HBoxContainer" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Text2"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+
+[node name="FinalScore" type="RichTextLabel" parent="Control/VBoxContainer/Text2/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(640, 300)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=100][center]Final Score:[p][center]12345"
+fit_content = true
+scroll_active = false
+
+[node name="DailyRank" type="RichTextLabel" parent="Control/VBoxContainer/Text2/VBoxContainer"]
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(640, 300)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=100][center]Daily Rank:[p][center]12345"
+fit_content = true
+scroll_active = false
+
+[node name="AllTimeRank" type="RichTextLabel" parent="Control/VBoxContainer/Text2/VBoxContainer"]
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=100][center]All Time Rank:[p][center]12345"
+fit_content = true
+scroll_active = false
+
+[node name="DailyNumbers" type="RichTextLabel" parent="Control/VBoxContainer/Text2"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=70][right]  1:[/right]
+[right]  2:[/right]
+[right]  3:[/right]
+[right]  4:[/right]
+[right]  5:[/right]
+[right]  6:[/right]
+[right]  7:[/right]
+[right]  8:[/right]
+[right]  9:[/right]
+[right]10:[/right]"
+scroll_active = false
+
+[node name="DailyScores" type="RichTextLabel" parent="Control/VBoxContainer/Text2"]
+custom_minimum_size = Vector2(530, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[wave amp=10.0 freq=5.0 connected=0][outline_size=20][font_size=70'][center][p][right]      22424[/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]
+[p][right]      22424 [/right][/p]"
+scroll_active = false
+
+[node name="AllTime" type="RichTextLabel" parent="Control/VBoxContainer/Text2"]
+visible = false
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_1ionu")
+bbcode_enabled = true
+text = "[outline_size=20][font_size=70'][center][p][left]  1:[/left]      22424[/p]
+[p][left]  2:[/left]      22424[/p]
+[p][left]  3:[/left]      22424[/p]
+[p][left]  4:[/left]      22424[/p]
+[p][left]  5:[/left]      22424[/p]
+[p][left]  6:[/left]      22424[/p]
+[p][left]  7:[/left]      22424[/p]
+[p][left]  8:[/left]      22424[/p]
+[p][left]  9:[/left]      22424[/p]
+[p][left] 10:[/left]      22424[/p]"
+scroll_active = false

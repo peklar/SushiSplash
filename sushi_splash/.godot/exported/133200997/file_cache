@@ -1,0 +1,23 @@
+res://addons/godOSC/demo/demo.tscn::6d6ff349889f72ebaf2ce6db2f37c542::1747827986::res://.godot/exported/133200997/export-d89e640908b69dbec670c075284f438e-demo.scn
+res://Fish/Fish.tscn::94410754456766054919145365b471ab::1758208383::res://.godot/exported/133200997/export-699b0cc0ba66a8b3fff569de27bcbe8f-Fish.scn
+res://Fish/FishSpawnParticles.tscn::abe2d0fe6b06b609bf377dbf67a55c91::1748426633::res://.godot/exported/133200997/export-9111fb1a2d5d317ee4a0eafd1cc31a46-FishSpawnParticles.scn
+res://Game/game.tscn::02d7c34a831f12810b22ffbf53279f48::1758208426::res://.godot/exported/133200997/export-8f3dd55d8784d9346a9c65607a93bf7b-game.scn
+res://Player/Player.tscn::343cec0a0b0bce30c4c5656eda5eb732::1758208382::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
+res://Trash/Trash.tscn::71d7b2e0a5b91f5c8158a377eda9dbc3::1758208382::res://.godot/exported/133200997/export-1a3132fc0d20bc7355a6fe7b2823e7a6-Trash.scn
+res://Trash/TrashCollectPopup.tscn::3429bc6b9b2949b454dd0dad9be5c7e9::1749822901::res://.godot/exported/133200997/export-0f44d4e0c7a8509946a971dbf69ca049-TrashCollectPopup.scn
+res://WaterSim/waterPoint.tscn::b67ff56315e6d8438b85123320436179::1758208382::res://.godot/exported/133200997/export-2f263540fcb5f4ad560a3b1c6e906535-waterPoint.scn
+res://WaterSim/WaterSim.tscn::47f097cd3a4f19cd84d355e09ad8ddc4::1758208383::res://.godot/exported/133200997/export-01dcdca1ce9a5e6e9ed979e561cdc5c7-WaterSim.scn
+res://WaterSim/water_test.tscn::c41f468ff117d701a335368e6d750135::1748430177::res://.godot/exported/133200997/export-1fd02ebdfa08327f2742b88bc54b21cd-water_test.scn
+res://ComboPopup.tscn::de44b57ceacf48658aee4620de1b0954::1748423664::res://.godot/exported/133200997/export-f51e4a18713ccbf78b50afbe03df9fee-ComboPopup.scn
+res://default_bus_layout.tres::ac366604c1c9468560c9b273836ac5db::1747412999::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://fish_spawn_particles.tscn::6f23026f66c1647a69d3133000b924a2::1747408821::res://.godot/exported/133200997/export-149b73979d87cfa419df626c37ff834a-fish_spawn_particles.scn
+res://VanishParticles.tscn::ba709a7e563dc56af9f7f8341b3947f5::1758208382::res://.godot/exported/133200997/export-9f80861146a8bd63ead5cc2815d6e8ef-VanishParticles.scn
+res://WaterSim/waterNoiseTexture.tres::f1d7325736441f3a79ece5ad0e8026e4::1748439170::res://.godot/exported/133200997/export-ec5f1e4e5d16b97d067b2d7cd861369f-waterNoiseTexture.res
+res://WaterSim/water_shader_material.tres::5a260ee690f60b572835f7227223986b::1748439170::res://.godot/exported/133200997/export-058a3a651b45f6288e296006ad998709-water_shader_material.res
+res://backgroundImages/IslandParts/island.tscn::92bb297bb3cd4eb917b5ab34a839c27f::1758208383::res://.godot/exported/133200997/export-ea64c3c87dd76d358faf400b575aa910-island.scn
+res://ScoreBoard/ScoreBoard.tscn::3abf346b034f9ccc1ecacb48ab21b7f0::1757959499::res://.godot/exported/133200997/export-e1d9262b6a44cc9d91d5c90b1efe2548-ScoreBoard.scn
+res://hit_flash_shader.tres::e73347a7654f3c21e5eade825947d820::1758208427::res://.godot/exported/133200997/export-856904c635088f0f5883a2fcf4bde079-hit_flash_shader.res
+res://DEBUGUI/debug_ui.tscn::b3085b112da22b7bf6e9485e1f670a31::1752052225::res://.godot/exported/133200997/export-06e29b5c69150e225b45b0c8537a0b45-debug_ui.scn
+res://DEBUGUI/debug_ui_theme.tres::cd5926028b6e2e50800cd8d9fbbdb0c6::1752051017::res://.godot/exported/133200997/export-f88c53979a8595eebfdb78c0e2e4fabb-debug_ui_theme.res
+res://ScoreBoard v3/ScoreboardTheme.tres::dc015f414f7febfc244055f7b31c661f::1757952473::res://.godot/exported/133200997/export-bf7210127fb1aeb238000398604687f6-ScoreboardTheme.res
+res://ScoreBoard v3/score_board_v_3.tscn::6a82a2dd2556cd129c31947d3474017a::1758208383::res://.godot/exported/133200997/export-683ca82e8a771cbae563e3109abe5bd0-score_board_v_3.scn

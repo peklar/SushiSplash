@@ -1,0 +1,11 @@
+#!/usr/bin/php
+<?php
+chdir(dirname(__FILE__));
+include("options.php");
+
+system('killall '.$options['appName']);
+system('killall ./'.$options['appName']);
+sleep(0.5);
+system('killall -9 '.$options['appName']);
+system('killall -9 ./'.$options['appName']);
+

@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://vwo0kthicsgu"]
+
+[ext_resource type="Script" path="res://Fish/FishSpawnParticles.gd" id="1_qqfba"]
+
+[sub_resource type="Curve" id="Curve_f6xrr"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.81868, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_hk6xi"]
+offsets = PackedFloat32Array(0, 0.618785, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_xfcx1"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="FishSpawnParticles" type="Node2D"]
+script = ExtResource("1_qqfba")
+
+[node name="SpawnParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -62)
+emitting = false
+amount = 16
+one_shot = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+spread = 95.03
+initial_velocity_min = 324.57
+initial_velocity_max = 403.52
+damping_min = 100.0
+damping_max = 100.0
+angle_max = 90.0
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_f6xrr")
+color = Color(0.000143478, 0.119897, 0.44762, 1)
+color_ramp = SubResource("Gradient_hk6xi")
+hue_variation_min = -0.11
+hue_variation_curve = SubResource("Curve_xfcx1")

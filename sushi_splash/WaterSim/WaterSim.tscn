@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://bm8l045tgyvcm"]
+
+[ext_resource type="Script" path="res://WaterSim/water_sim.gd" id="1_3b87f"]
+[ext_resource type="Shader" path="res://WaterSim/WaterSimShader.gdshader" id="2_q1ms2"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_w4sob"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_aclb0"]
+seamless = true
+noise = SubResource("FastNoiseLite_w4sob")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hpvfm"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hx53g"]
+seamless = true
+noise = SubResource("FastNoiseLite_hpvfm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wdw4b"]
+shader = ExtResource("2_q1ms2")
+shader_parameter/scroll1 = Vector2(0.03, 0.03)
+shader_parameter/scroll2 = Vector2(-0.05, -0.05)
+shader_parameter/distortion_str = 0.2
+shader_parameter/water_color = Color(0.457107, 0.954913, 1, 1)
+shader_parameter/noise = SubResource("NoiseTexture2D_aclb0")
+shader_parameter/noise2 = SubResource("NoiseTexture2D_hx53g")
+
+[node name="WaterSim" type="Node2D"]
+z_index = 10
+script = ExtResource("1_3b87f")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_wdw4b")
+color = Color(0.278431, 1, 1, 0.243137)
+polygon = PackedVector2Array(52, 143, -44, 1119, 1949, 1101, 1958, 137, 441, 183)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(50, 120, 196, 117, 384, 125, 584, 131, 761, 124, 916, 128, 1005, 134)
+
+[node name="PointsContainer" type="Node2D" parent="."]

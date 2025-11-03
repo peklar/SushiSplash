@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmmvh611wf521"]
+
+[node name="FishSpawnParticles" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 24
+lifetime = 0.3
+one_shot = true
+spread = 180.0
+gravity = Vector2(0, 500)
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+scale_amount_min = 10.0
+scale_amount_max = 10.0

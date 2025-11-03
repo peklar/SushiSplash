@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://82lmv7kwcpoo"
+path="res://.godot/imported/whoosh_swish_small_01.ogg-17511eb5a28514aff6877dd9e9a77019.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundEffects/pro sound collection/whoosh_swish_small_01.ogg"
+dest_files=["res://.godot/imported/whoosh_swish_small_01.ogg-17511eb5a28514aff6877dd9e9a77019.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

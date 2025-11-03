@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://tbp52yh6sfy1"
+path="res://.godot/imported/collect_coin_01.ogg-b6d9b383c7385233d23a8357414dd43b.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundEffects/pro sound collection/collect_coin_01.ogg"
+dest_files=["res://.godot/imported/collect_coin_01.ogg-b6d9b383c7385233d23a8357414dd43b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

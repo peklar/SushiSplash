@@ -1,0 +1,226 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw4isfiuat3cl"]
+
+[ext_resource type="Script" path="res://DEBUGUI/debug_ui.gd" id="1_fwwk4"]
+[ext_resource type="Theme" uid="uid://cnlrq37iuadjr" path="res://DEBUGUI/debug_ui_theme.tres" id="2_txknl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_02bll"]
+bg_color = Color(0.06, 0.06, 0.06, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[node name="DebugUI" type="CanvasLayer"]
+script = ExtResource("1_fwwk4")
+
+[node name="MainPanel" type="Panel" parent="."]
+offset_left = 9.0
+offset_top = 750.0
+offset_right = 674.0
+offset_bottom = 1070.0
+theme = ExtResource("2_txknl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="packet" type="Panel" parent="MainPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_02bll")
+
+[node name="Line2D" type="Line2D" parent="MainPanel/VBoxContainer/packet"]
+position = Vector2(8, 6)
+points = PackedVector2Array(9, 28, 28, 27, 52, 28, 85, 27, 117, 27)
+default_color = Color(0, 0.533333, 1, 1)
+
+[node name="TimeBetweenPackets" type="RichTextLabel" parent="MainPanel/VBoxContainer/packet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 44.0
+offset_right = -261.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=20]TimeBetweenPackets:
+123"
+
+[node name="PacketValue" type="RichTextLabel" parent="MainPanel/VBoxContainer/packet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.0
+offset_top = 44.0
+offset_right = -6.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=20]PacketValue:
+(123124124124,125125152215125)"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/VBoxContainer/packet"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "/packet"
+
+[node name="posx" type="Panel" parent="MainPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_02bll")
+
+[node name="Line2D" type="Line2D" parent="MainPanel/VBoxContainer/posx"]
+position = Vector2(8, 6)
+points = PackedVector2Array(9, 28, 28, 27, 52, 28, 85, 27, 117, 27)
+default_color = Color(0.92, 0.838427, 0.2208, 1)
+
+[node name="TimeBetweenPackets" type="RichTextLabel" parent="MainPanel/VBoxContainer/posx"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 44.0
+offset_right = -261.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=20]TimeBetweenPackets:
+123"
+
+[node name="PacketValue" type="RichTextLabel" parent="MainPanel/VBoxContainer/posx"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.0
+offset_top = 44.0
+offset_right = -6.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=20]PacketValue:
+(123124124124,125125152215125)"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/VBoxContainer/posx"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "/posx"
+
+[node name="posy" type="Panel" parent="MainPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_02bll")
+
+[node name="Line2D" type="Line2D" parent="MainPanel/VBoxContainer/posy"]
+position = Vector2(8, 6)
+points = PackedVector2Array(9, 28, 28, 27, 52, 28, 85, 27, 117, 27)
+default_color = Color(1, 0.0687978, 0.0966096, 1)
+
+[node name="TimeBetweenPackets" type="RichTextLabel" parent="MainPanel/VBoxContainer/posy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 44.0
+offset_right = -261.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=20]TimeBetweenPackets:
+123"
+
+[node name="PacketValue" type="RichTextLabel" parent="MainPanel/VBoxContainer/posy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 207.0
+offset_top = 44.0
+offset_right = -6.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=20]PacketValue:
+(123124124124,125125152215125)"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MainPanel/VBoxContainer/posy"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "/posy"
+
+[node name="DiscardedValuesList" type="Panel" parent="."]
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 674.0
+offset_bottom = 744.0
+theme = ExtResource("2_txknl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DiscardedValuesList"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=25]Discarded values:"
+metadata/_edit_group_ = true
+
+[node name="AllValues" type="Panel" parent="."]
+offset_left = 1247.0
+offset_top = 8.0
+offset_right = 1912.0
+offset_bottom = 1073.0
+theme = ExtResource("2_txknl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AllValues"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=25]All Values:"
+metadata/_edit_group_ = true

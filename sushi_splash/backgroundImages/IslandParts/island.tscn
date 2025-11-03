@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://7jrjvki2qpkj"]
+
+[ext_resource type="Texture2D" uid="uid://bwhypaws76d21" path="res://backgroundImages/IslandParts/IslandSand.png" id="1_42mxv"]
+[ext_resource type="Script" path="res://backgroundImages/IslandParts/island.gd" id="1_ejqwh"]
+[ext_resource type="Texture2D" uid="uid://b2fndytwa72hq" path="res://backgroundImages/IslandParts/IslandTree.png" id="2_x3viu"]
+[ext_resource type="Texture2D" uid="uid://c74el41tpitvd" path="res://backgroundImages/IslandParts/IslandLeaves.png" id="3_2fhn4"]
+
+[sub_resource type="Animation" id="Animation_nek0i"]
+resource_name = "Idle"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sand/Trunk/Leaves:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sand/Trunk/Leaves:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0837758, -0.0837758, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sand/Trunk:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0523599, -0.0698132, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_etcri"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sand/Trunk/Leaves:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sand/Trunk/Leaves:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sand/Trunk:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0523599]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_700pl"]
+_data = {
+"Idle": SubResource("Animation_nek0i"),
+"RESET": SubResource("Animation_etcri")
+}
+
+[node name="Island" type="Node2D"]
+script = ExtResource("1_ejqwh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_700pl")
+}
+
+[node name="Sand" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_42mxv")
+
+[node name="Trunk" type="Sprite2D" parent="Sand"]
+position = Vector2(31, 46)
+rotation = 0.0523599
+texture = ExtResource("2_x3viu")
+
+[node name="Leaves" type="Sprite2D" parent="Sand/Trunk"]
+position = Vector2(-30, -250)
+texture = ExtResource("3_2fhn4")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

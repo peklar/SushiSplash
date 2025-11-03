@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d07qdxqc3iocy"
+path="res://.godot/imported/water_splash_object_body_03.ogg-9c5e2b3c562105534dd329a408f9ecb1.oggvorbisstr"
+
+[deps]
+
+source_file="res://SoundEffects/pro sound collection/water_splash_object_body_03.ogg"
+dest_files=["res://.godot/imported/water_splash_object_body_03.ogg-9c5e2b3c562105534dd329a408f9ecb1.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

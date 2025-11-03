@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvw7ftt6i4ndx"]
+
+[ext_resource type="PackedScene" uid="uid://bm8l045tgyvcm" path="res://WaterSim/WaterSim.tscn" id="1_ic1ws"]
+
+[node name="waterTest" type="Node2D"]
+
+[node name="WaterSim" parent="." instance=ExtResource("1_ic1ws")]
+position = Vector2(0, 323)

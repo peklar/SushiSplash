@@ -1,0 +1,537 @@
+[gd_scene load_steps=9 format=3 uid="uid://bqcylkjnt7ncv"]
+
+[ext_resource type="Script" path="res://ScoreBoard v3/score_board_v_3.gd" id="1_3pxna"]
+[ext_resource type="FontFile" uid="uid://bs7bm83p55awx" path="res://MaterhornNF.otf" id="1_21adf"]
+[ext_resource type="Theme" uid="uid://duw18pseenfd4" path="res://ScoreBoard v3/ScoreboardTheme.tres" id="2_sxoui"]
+
+[sub_resource type="Animation" id="Animation_0rpxb"]
+resource_name = "LoadScoreboard"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundDark:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.494118)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScoresContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("YourScoreContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("YourScoreContainer:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.217638, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScoresContainer:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.307786, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0.755, 0.755)]
+}
+
+[sub_resource type="Animation" id="Animation_qgrng"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundDark:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.494118)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScoresContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("YourScoreContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("YourScoreContainer:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScoresContainer:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.755, 0.755)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wn1en"]
+_data = {
+"LoadScoreboard": SubResource("Animation_0rpxb"),
+"RESET": SubResource("Animation_qgrng")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2spi"]
+bg_color = Color(0, 0, 0, 0.411765)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxcr7"]
+bg_color = Color(1, 0.809333, 0.12, 0.592157)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="ScoreBoard_v3" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_3pxna")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wn1en")
+}
+
+[node name="HTTPRequestPOST" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequestGET" type="HTTPRequest" parent="."]
+
+[node name="BackgroundDark" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.494118)
+metadata/_edit_lock_ = true
+
+[node name="YourScoreContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 17.0
+offset_right = 1.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1, 1)
+
+[node name="Background" type="PanelContainer" parent="YourScoreContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -414.0
+offset_top = -491.0
+offset_right = 414.0
+offset_bottom = -233.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2spi")
+
+[node name="FinalScoreScaleContainer" type="Control" parent="YourScoreContainer"]
+anchors_preset = 0
+offset_top = -430.0
+offset_right = 2.0
+offset_bottom = -428.0
+pivot_offset = Vector2(1, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="YourScoreContainer/FinalScoreScaleContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -472.0
+offset_top = -69.0
+offset_right = 472.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sxoui")
+theme_override_fonts/normal_font = ExtResource("1_21adf")
+bbcode_enabled = true
+text = "[wave amp=10.0 freq=10.0 connected=0][outline_size=20][font_size=120][center]Final Score:[p]"
+
+[node name="PlayerScoreScaleContainer2" type="Control" parent="YourScoreContainer"]
+anchors_preset = 0
+offset_top = -300.0
+offset_right = 2.0
+offset_bottom = -298.0
+pivot_offset = Vector2(1, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="YourScoreContainer/PlayerScoreScaleContainer2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -472.0
+offset_top = -69.0
+offset_right = 472.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sxoui")
+theme_override_fonts/normal_font = ExtResource("1_21adf")
+bbcode_enabled = true
+text = "[color=#FFC700][wave amp=20.0 freq=10.0 connected=0][outline_size=20][font_size=120][center]12345"
+
+[node name="ScoresContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 132.0
+offset_right = 1.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.755, 0.755)
+pivot_offset = Vector2(1, 1)
+
+[node name="Scores" type="HBoxContainer" parent="ScoresContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2000.0
+offset_top = -375.0
+offset_right = 2000.0
+offset_bottom = 375.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(2000, 375)
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 160
+alignment = 1
+
+[node name="Monthly" type="Control" parent="ScoresContainer/Scores"]
+custom_minimum_size = Vector2(600, 750)
+layout_mode = 2
+
+[node name="ScaleContainer" type="Control" parent="ScoresContainer/Scores/Monthly"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 124.503
+offset_right = 2.0
+offset_bottom = 126.503
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1, 1)
+
+[node name="Background" type="PanelContainer" parent="ScoresContainer/Scores/Monthly/ScaleContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.5
+offset_top = -386.43
+offset_right = 238.5
+offset_bottom = 433.57
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2spi")
+
+[node name="TopScore" type="PanelContainer" parent="ScoresContainer/Scores/Monthly/ScaleContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.5
+offset_top = -250.331
+offset_right = 231.5
+offset_bottom = -143.331
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lxcr7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScoresContainer/Scores/Monthly/ScaleContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -376.0
+offset_right = 349.0
+offset_bottom = 624.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sxoui")
+theme_override_fonts/normal_font = ExtResource("1_21adf")
+bbcode_enabled = true
+text = "[outline_size=25][font_size=100][center]This Month:[outline_size=20][font_size=80]
+[center]12345
+[center]12345
+[center]12345
+[center]12345
+[center]12345"
+
+[node name="Daily" type="Control" parent="ScoresContainer/Scores"]
+custom_minimum_size = Vector2(600, 750)
+layout_mode = 2
+
+[node name="ScaleContainer" type="Control" parent="ScoresContainer/Scores/Daily"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 45.0
+offset_right = 2.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.095, 1.095)
+pivot_offset = Vector2(1, 1)
+
+[node name="Background" type="PanelContainer" parent="ScoresContainer/Scores/Daily/ScaleContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -373.0
+offset_right = 239.0
+offset_bottom = 455.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2spi")
+
+[node name="TopScore" type="PanelContainer" parent="ScoresContainer/Scores/Daily/ScaleContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.5
+offset_top = -235.753
+offset_right = 231.5
+offset_bottom = -128.753
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lxcr7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScoresContainer/Scores/Daily/ScaleContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -376.0
+offset_right = 349.0
+offset_bottom = 624.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sxoui")
+theme_override_fonts/normal_font = ExtResource("1_21adf")
+bbcode_enabled = true
+text = "[outline_size=25][font_size=120][center]Today:[outline_size=20][font_size=80]
+[center]12345
+[center]12345
+[center]12345
+[center]12345
+[center]12345"
+
+[node name="AllTime" type="Control" parent="ScoresContainer/Scores"]
+custom_minimum_size = Vector2(600, 750)
+layout_mode = 2
+
+[node name="ScaleContainer" type="Control" parent="ScoresContainer/Scores/AllTime"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 124.503
+offset_right = 2.0
+offset_bottom = 126.503
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1, 1)
+
+[node name="Background" type="PanelContainer" parent="ScoresContainer/Scores/AllTime/ScaleContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.0
+offset_top = -386.43
+offset_right = 239.0
+offset_bottom = 433.57
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2spi")
+
+[node name="TopScore" type="PanelContainer" parent="ScoresContainer/Scores/AllTime/ScaleContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -231.5
+offset_top = -250.331
+offset_right = 231.5
+offset_bottom = -143.331
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lxcr7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScoresContainer/Scores/AllTime/ScaleContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -376.0
+offset_right = 349.0
+offset_bottom = 624.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sxoui")
+theme_override_fonts/normal_font = ExtResource("1_21adf")
+bbcode_enabled = true
+text = "[outline_size=25][font_size=100][center]All Time:[outline_size=20][font_size=80]
+[center]12345
+[center]12345
+[center]12345
+[center]12345
+[center]12345"
+
+[node name="GetTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="DebugLabel" type="RichTextLabel" parent="."]
+offset_right = 634.0
+offset_bottom = 575.0
+bbcode_enabled = true
+
+[connection signal="request_completed" from="HTTPRequestPOST" to="." method="_on_http_request_post_request_completed"]
+[connection signal="request_completed" from="HTTPRequestGET" to="." method="_on_http_request_get_request_completed"]
+[connection signal="timeout" from="GetTimer" to="." method="_on_get_timer_timeout"]
